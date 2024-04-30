@@ -1,17 +1,24 @@
 # container-help.js
 ## 打包
-
+podman/docker 客户端
 ```
 npm run build
 ```
 
-## how to use
+## how to use like a docker
 ```javascript
-const c = require('./dist/index')
+const c = require('container-helper.js')
 const docker =c.getVm('docker')
 // docker images
 docker.showImages().then(images=>console.log(images))
+```
 
+## how to use like a podman
+```javascript
+const c = require('container-helper.js')
+const podman =c.getVm('podman')
+// docker images
+podman.showImages().then(images=>console.log(images))
 ```
 
 ## functions
