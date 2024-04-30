@@ -1,7 +1,7 @@
 
-import { registor } from "./base/BasContainer";
+import { Container, registor } from "./base/BasContainer";
 import { DockerInstance } from "./instance/DockerInstance";
-import {PodmanInstance} from './instance/PodmanInstance'
+import { PodmanInstance } from './instance/PodmanInstance';
 registor.addVm('docker',DockerInstance)
 registor.addVm('podman',PodmanInstance)
 /**
@@ -9,6 +9,6 @@ registor.addVm('podman',PodmanInstance)
  * @param type 
  * @returns 
  */
-export const getVm = <T>(type:string): T=>{
+export const getVm = <T extends Container = null>(type:string): T=>{
   return registor.getVm(type) as T
 }
