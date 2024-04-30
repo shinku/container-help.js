@@ -1,2 +1,8 @@
 # container-help.js
-nodejs to help connect container such as docker, podman
+## 打包
+
+```
+npm run build
+```
+
+

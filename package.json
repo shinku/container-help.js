@@ -1,7 +1,7 @@
 {
-  "name": "container-connect",
+  "name": "container-helper.js",
   "version": "1.0.0",
-  "description": "",
+  "description": "container-helper",
   "main": "./dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,9 +9,6 @@
     "test-docker": "jest ./test/docker.test.ts -ts",
     "test-podman": "jest ./test/podman.test.ts -ts",
     "build": "rm -rf ./dist && npx tsc "
-  },
-  "bin": {
-    "borrow": "./bin.js"
   },
   "author": "",
   "license": "ISC",
