@@ -8,7 +8,7 @@
     "test-command": "jest ./test/command.test.ts -ts",
     "test-docker": "jest ./test/docker.test.ts -ts",
     "test-podman": "jest ./test/podman.test.ts -ts",
-    "build": "rm -rf ./dist && npx tsc "
+    "build": "rm -rf ./dist && npx tsc"
   },
   "author": "",
   "license": "ISC",

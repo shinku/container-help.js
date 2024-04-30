@@ -1,6 +1,6 @@
 import path = require('path');
 import { IBuildImageOption } from '../src/base/BasContainer';
-import {getVm} from '../src/index'
+import { getVm } from '../src/index';
 import { DockerInstance } from '../src/instance/DockerInstance';
 describe("test docker", ()=>{
   // make sure that you have started your docker service
