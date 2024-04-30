@@ -127,11 +127,7 @@ export class Container {
     this.imageOption = option
     // goto dockerfilepath
     await runCommand('cd '+ option.dockerFilePath +" && "+this.vmtype + ` build -t ${option.imageName}:${option.version ||"latest"} .`);
-    /**
-     * build a image
-     */
-    await this.runCommand(`build -t ${option.imageName}:${option.version ||"latest"} .`)
-    
+
   }
 
   /**
@@ -149,7 +145,7 @@ export class Container {
    * getImageNameAndVersion
    * @returns 
    */
-  getImageNameAndVersion(){
+  private getImageNameAndVersion(){
     return `${this.imageOption.imageName}:${this.imageOption.version || "latest"}`
   }
 
@@ -158,7 +154,7 @@ export class Container {
    * @param option 
    * @returns 
    */
-  getImageEnvOption(option: IRunImageOption){
+  private getImageEnvOption(option: IRunImageOption){
     const commands = [];
     Object.keys(option.e || {}).forEach(key=>{
       commands.push(`-e ${key}=${option.e[key]}`)
