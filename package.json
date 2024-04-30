@@ -13,7 +13,7 @@
   "author": "",
   "license": "ISC",
   "repository": {
-    "url": "https://github.com/shinku/container-help.js",
+    "url": "git+https://github.com/shinku/container-help.js.git",
     "type": "github"
   },
   "devDependencies": {
