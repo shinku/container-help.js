@@ -20,7 +20,7 @@ describe("test docker", ()=>{
     await docker.removeContainer("test-mysql")
     const option:IBuildImageOption = {
       imageName: "mysql",
-      dockerFilePath: path.join(__dirname, "../images/mysql"),
+      dockerFilePath: path.join(__dirname, "./images/mysql"),
       version: 'latest'
     }
     docker.image = option
